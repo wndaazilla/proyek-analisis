@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_94f44111d5dbcc8dd2d3b03c4a5c98d9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_94f44111d5dbcc8dd2d3b03c4a5c98d9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_94f44111d5dbcc8dd2d3b03c4a5c98d9 = L.map(
+                "map_94f44111d5dbcc8dd2d3b03c4a5c98d9",
+                {
+                    center: [-21.967175399766646, -43.78913490505845],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b4cd2009671bfc7530221be192731317 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b4cd2009671bfc7530221be192731317.addTo(map_94f44111d5dbcc8dd2d3b03c4a5c98d9);
+        
+    
+            var marker_cluster_ff695dc02c0475a4776489d5f69db12f = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_9d628f789d73e80eb3162b82bb2f1d74 = L.marker(
+                [-23.01298650422646, -43.46551954103294],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_0352490e2ec8b2706c0538c5979bcfe4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9d628f789d73e80eb3162b82bb2f1d74.setIcon(icon_0352490e2ec8b2706c0538c5979bcfe4);
+        
+    
+        var popup_c4fc47a5d54d068b115b73368472df4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ad434db7504dc9f7c466455e07e1600 = $(`<div id="html_6ad434db7504dc9f7c466455e07e1600" style="width: 100.0%; height: 100.0%;">rio de janeiro: 136 customers</div>`)[0];
+                popup_c4fc47a5d54d068b115b73368472df4e.setContent(html_6ad434db7504dc9f7c466455e07e1600);
+            
+        
+
+        marker_9d628f789d73e80eb3162b82bb2f1d74.bindPopup(popup_c4fc47a5d54d068b115b73368472df4e)
+        ;
+
+        
+    
+    
+            var marker_3af99ad16f4fc9079315d23ea21bba00 = L.marker(
+                [-22.87863691496328, -43.08609614601055],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_dbb4d99ac63381c7c2cef4063c9fbc61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_3af99ad16f4fc9079315d23ea21bba00.setIcon(icon_dbb4d99ac63381c7c2cef4063c9fbc61);
+        
+    
+        var popup_18a2d49ac34fb6d5916af025990da21b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f106488d08135e64cef71db50cc8b1d = $(`<div id="html_2f106488d08135e64cef71db50cc8b1d" style="width: 100.0%; height: 100.0%;">niteroi: 117 customers</div>`)[0];
+                popup_18a2d49ac34fb6d5916af025990da21b.setContent(html_2f106488d08135e64cef71db50cc8b1d);
+            
+        
+
+        marker_3af99ad16f4fc9079315d23ea21bba00.bindPopup(popup_18a2d49ac34fb6d5916af025990da21b)
+        ;
+
+        
+    
+    
+            var marker_9401c6c81e64e8f4d2c00607793a3ea2 = L.marker(
+                [-23.00061899109568, -43.40471828456725],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_ef06bfdd64acbd010d55243fff03cc0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_9401c6c81e64e8f4d2c00607793a3ea2.setIcon(icon_ef06bfdd64acbd010d55243fff03cc0c);
+        
+    
+        var popup_c26d4bc193a6aa7baa3f1d8ce8068274 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7a2d0a14d932802ec984c7604c9abd5 = $(`<div id="html_b7a2d0a14d932802ec984c7604c9abd5" style="width: 100.0%; height: 100.0%;">rio de janeiro: 116 customers</div>`)[0];
+                popup_c26d4bc193a6aa7baa3f1d8ce8068274.setContent(html_b7a2d0a14d932802ec984c7604c9abd5);
+            
+        
+
+        marker_9401c6c81e64e8f4d2c00607793a3ea2.bindPopup(popup_c26d4bc193a6aa7baa3f1d8ce8068274)
+        ;
+
+        
+    
+    
+            var marker_f31d401801189e131394b64f40f01ded = L.marker(
+                [-22.90324481661885, -43.107023598220486],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_c62ec215fad3b01cee08d31ce53c13f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_f31d401801189e131394b64f40f01ded.setIcon(icon_c62ec215fad3b01cee08d31ce53c13f0);
+        
+    
+        var popup_9b205e7268bc0436a96f7c4c17c46a26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c9496c8b0b4b582dd55c1d4d6decc35 = $(`<div id="html_1c9496c8b0b4b582dd55c1d4d6decc35" style="width: 100.0%; height: 100.0%;">niteroi: 115 customers</div>`)[0];
+                popup_9b205e7268bc0436a96f7c4c17c46a26.setContent(html_1c9496c8b0b4b582dd55c1d4d6decc35);
+            
+        
+
+        marker_f31d401801189e131394b64f40f01ded.bindPopup(popup_9b205e7268bc0436a96f7c4c17c46a26)
+        ;
+
+        
+    
+    
+            var marker_df64f88e37d108c8395059b3bbc37ee5 = L.marker(
+                [-22.96914820115268, -43.38306523796816],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_378209846798d20da1f480f5ebc9ad88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_df64f88e37d108c8395059b3bbc37ee5.setIcon(icon_378209846798d20da1f480f5ebc9ad88);
+        
+    
+        var popup_25226580f61fdab5f2358dd68ff88a14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_893cc21251601b0b419d0884885b11cc = $(`<div id="html_893cc21251601b0b419d0884885b11cc" style="width: 100.0%; height: 100.0%;">rio de janeiro: 103 customers</div>`)[0];
+                popup_25226580f61fdab5f2358dd68ff88a14.setContent(html_893cc21251601b0b419d0884885b11cc);
+            
+        
+
+        marker_df64f88e37d108c8395059b3bbc37ee5.bindPopup(popup_25226580f61fdab5f2358dd68ff88a14)
+        ;
+
+        
+    
+    
+            var marker_4d55600a5c92090a3e6a51de55e41e56 = L.marker(
+                [-20.345030195796227, -40.28790374199653],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_e96be6b106e336043c81e28cc49e8cef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_4d55600a5c92090a3e6a51de55e41e56.setIcon(icon_e96be6b106e336043c81e28cc49e8cef);
+        
+    
+        var popup_880e3d46f639f216e39c81330dc0f2ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9d2417bed269346f3bfd252c479c688 = $(`<div id="html_c9d2417bed269346f3bfd252c479c688" style="width: 100.0%; height: 100.0%;">vila velha: 100 customers</div>`)[0];
+                popup_880e3d46f639f216e39c81330dc0f2ba.setContent(html_c9d2417bed269346f3bfd252c479c688);
+            
+        
+
+        marker_4d55600a5c92090a3e6a51de55e41e56.bindPopup(popup_880e3d46f639f216e39c81330dc0f2ba)
+        ;
+
+        
+    
+    
+            var marker_92f4f92cbf52bd6951cb4f8ce44ba3ab = L.marker(
+                [-19.46878672545068, -42.56389478130509],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_ecfe56732d790142dbe7551eb0113d7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_92f4f92cbf52bd6951cb4f8ce44ba3ab.setIcon(icon_ecfe56732d790142dbe7551eb0113d7a);
+        
+    
+        var popup_71a16e028d253b4faed7e876624a2597 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4de9cc3d7b7a44a735a8d782ca422d6 = $(`<div id="html_e4de9cc3d7b7a44a735a8d782ca422d6" style="width: 100.0%; height: 100.0%;">ipatinga: 92 customers</div>`)[0];
+                popup_71a16e028d253b4faed7e876624a2597.setContent(html_e4de9cc3d7b7a44a735a8d782ca422d6);
+            
+        
+
+        marker_92f4f92cbf52bd6951cb4f8ce44ba3ab.bindPopup(popup_71a16e028d253b4faed7e876624a2597)
+        ;
+
+        
+    
+    
+            var marker_4b0cdf8ea52235efffcbc861a8bfbabc = L.marker(
+                [-23.17639710613476, -46.97415662176983],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_a7e6badf1e10d782c9d4c6c3887aaaf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_4b0cdf8ea52235efffcbc861a8bfbabc.setIcon(icon_a7e6badf1e10d782c9d4c6c3887aaaf2);
+        
+    
+        var popup_3f3b78443009108eac212bfd4e95bd39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53dc05e2cd4ac47c7c6552a151f3bb37 = $(`<div id="html_53dc05e2cd4ac47c7c6552a151f3bb37" style="width: 100.0%; height: 100.0%;">jundiai: 92 customers</div>`)[0];
+                popup_3f3b78443009108eac212bfd4e95bd39.setContent(html_53dc05e2cd4ac47c7c6552a151f3bb37);
+            
+        
+
+        marker_4b0cdf8ea52235efffcbc861a8bfbabc.bindPopup(popup_3f3b78443009108eac212bfd4e95bd39)
+        ;
+
+        
+    
+    
+            var marker_8ff7d3beefe9d08837c0ff7436a8afca = L.marker(
+                [-23.00365666838398, -43.34075885321385],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_56341f60c4fda33ecb1daaa7d2531551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_8ff7d3beefe9d08837c0ff7436a8afca.setIcon(icon_56341f60c4fda33ecb1daaa7d2531551);
+        
+    
+        var popup_9d6b06ec68a6294cf4627ef29dea8a00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_087afc234fe3fad68abaa4eed254c17f = $(`<div id="html_087afc234fe3fad68abaa4eed254c17f" style="width: 100.0%; height: 100.0%;">rio de janeiro: 85 customers</div>`)[0];
+                popup_9d6b06ec68a6294cf4627ef29dea8a00.setContent(html_087afc234fe3fad68abaa4eed254c17f);
+            
+        
+
+        marker_8ff7d3beefe9d08837c0ff7436a8afca.bindPopup(popup_9d6b06ec68a6294cf4627ef29dea8a00)
+        ;
+
+        
+    
+    
+            var marker_f89d57e388ef586b38c65b9e261ae873 = L.marker(
+                [-18.913247873843886, -48.27821224449974],
+                {}
+            ).addTo(marker_cluster_ff695dc02c0475a4776489d5f69db12f);
+        
+    
+            var icon_c95c68b47343629e29c4d5939c928dab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_f89d57e388ef586b38c65b9e261ae873.setIcon(icon_c95c68b47343629e29c4d5939c928dab);
+        
+    
+        var popup_e9a85a7070a16ce5ca3d91de8e6ca381 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1330119d59d275c36095666fca0f6aec = $(`<div id="html_1330119d59d275c36095666fca0f6aec" style="width: 100.0%; height: 100.0%;">uberlandia: 85 customers</div>`)[0];
+                popup_e9a85a7070a16ce5ca3d91de8e6ca381.setContent(html_1330119d59d275c36095666fca0f6aec);
+            
+        
+
+        marker_f89d57e388ef586b38c65b9e261ae873.bindPopup(popup_e9a85a7070a16ce5ca3d91de8e6ca381)
+        ;
+
+        
+    
+    
+            marker_cluster_ff695dc02c0475a4776489d5f69db12f.addTo(map_94f44111d5dbcc8dd2d3b03c4a5c98d9);
+        
+</script>
+</html>
