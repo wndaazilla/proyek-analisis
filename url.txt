@@ -1,1 +1,1 @@
-https://mdzpfbcwkuemdjznwbnsql.streamlit.app/
+https://dashboard-data.streamlit.app/
