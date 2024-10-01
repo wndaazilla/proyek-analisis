@@ -3,3 +3,5 @@ pandas
 matplotlib
 seaborn
 babel
+folium
+streamlit-folium
