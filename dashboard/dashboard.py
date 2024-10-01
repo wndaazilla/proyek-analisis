@@ -51,7 +51,7 @@ category_and_city_sales_df = create_category_and_city_sales_df(main_df)
 
 
 # Section for Top Product Categories and Cities
-st.header('E-Commerce Public Dashboard :bar_chart:')
+st.title('E-Commerce Public Dashboard :bar_chart:')
 st.subheader(":first_place_medal: Top Product Categories and Cities by Sales")
 
 category_sales = main_df.groupby('product_category_name_english').agg({'price': 'sum'}).reset_index()
