@@ -19,7 +19,9 @@ pip install -r requirements.txt
 ## Run streamlit app
 ```
 streamlit run dashboard.py
+```
 
-## streamlit app deploy
+## Streamlit deploy
+```
 https://mdzpfbcwkuemdjznwbnsql.streamlit.app/
 ```
