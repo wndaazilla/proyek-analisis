@@ -5,6 +5,10 @@ import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
 
+import folium
+from folium.plugins import MarkerCluster
+from streamlit_folium import folium_static
+
 sns.set(style='dark')
 
 # Helper function yang dibutuhkan untuk menyiapkan berbagai dataframe
@@ -47,6 +51,7 @@ category_and_city_sales_df = create_category_and_city_sales_df(main_df)
 
 
 # Section for Top Product Categories and Cities
+st.header('E-Commerce Public Dashboard :bar_chart:')
 st.subheader(":first_place_medal: Top Product Categories and Cities by Sales")
 
 category_sales = main_df.groupby('product_category_name_english').agg({'price': 'sum'}).reset_index()
@@ -102,3 +107,36 @@ plt.tick_params(axis='x', labelsize=7)
 plt.tick_params(axis='y', labelsize=7)
 plt.tight_layout()  
 st.pyplot(plt)
+
+# Section for Highest Customers Area Map
+st.subheader(':round_pushpin: Highest Customers Area Map')
+
+top_cities = pd.DataFrame({
+    'geolocation_city': ['sao paulo', 'rio de janeiro', 'belo horizonte', 'brasilia', 'curitiba', 
+                         'campinas', 'porto alegre', 'salvador', 'guarulhos', 'sao bernardo do campo'],
+    'geolocation_state': ['SP', 'RJ', 'MG', 'DF', 'PR', 'SP', 'RS', 'BA', 'SP', 'SP'],
+    'geolocation_lat': [-23.5505, -22.9068, -19.9167, -15.7801, -25.4284, 
+                        -22.9099, -30.0346, -12.9714, -23.4542, -23.691],
+    'geolocation_lng': [-46.6333, -43.1729, -43.9345, -47.9292, -49.2733, 
+                        -47.0626, -51.2177, -38.5014, -46.5333, -46.5646],
+    'customer_count': [18290, 8004, 3214, 2238, 1792, 1714, 1625, 1476, 1366, 1102]
+})
+
+initial_location = [top_cities['geolocation_lat'].mean(), top_cities['geolocation_lng'].mean()]
+
+# Membuat peta dengan folium
+map_cities = folium.Map(location=initial_location, zoom_start=5)
+
+marker_cluster = MarkerCluster().add_to(map_cities)
+
+# Menambahkan marker untuk setiap pelanggan
+for i, row in top_cities.iterrows():
+    color = 'blue' if row['customer_count'] == top_cities['customer_count'].max() else 'gray'
+    
+    folium.Marker(
+        location=[row['geolocation_lat'], row['geolocation_lng']],
+        popup=f"{row['geolocation_city']}, {row['geolocation_state']}: {row['customer_count']} customers",
+        icon=folium.Icon(color=color)
+    ).add_to(marker_cluster)
+
+folium_static(map_cities)
