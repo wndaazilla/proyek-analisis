@@ -9,8 +9,8 @@ pip install -r requirements.txt
 
 ## Setup Environment - Shell/Terminal
 ```
-mkdir proyek_analisis_data
-cd proyek_analisis_data
+mkdir proyek-analisis
+cd proyek-analisis
 pipenv install
 pipenv shell
 pip install -r requirements.txt
@@ -23,5 +23,5 @@ streamlit run dashboard.py
 
 ## Streamlit deploy
 ```
-https://mdzpfbcwkuemdjznwbnsql.streamlit.app/
+https://dashboard-data.streamlit.app/
 ```
